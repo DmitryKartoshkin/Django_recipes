@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <h1>рецепт</h1>
+    {% for title, quantity in pages.items %}
+        <a>{{ title }}: {{quantity}}</a>
+        <br>
+    {% endfor %}
+    <a href="{% url 'index' %}">Перейти к главной странице</a>
+</body>
+</html>
